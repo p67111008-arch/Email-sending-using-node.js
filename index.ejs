@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+    <title>Application Form</title>
+</head>
+<body>
+    <h3>Student Application Form</h3>
+    <p>Please fill in the field below</p>
+
+
+
+
+    <form action="/" method="post">
+  <p> Firstname : <input type="text" name="firstname"></p>
+   <p>Lastname : <input type="text" name="lastname"></p>
+   <p>Gender : Male <input type="radio" name="sex" value="Male">
+                Female <input type="radio" name="sex" value="Female">
+</p>
+<% let programs = ["Data Science", "Fullstack", "Python",
+"Frontend Developmwnt", "UX Design", "Software Development"] %>
+     
+<p>Course : <select name="course">
+    <option value="">Select Your Course</option>
+    <% programs.forEach((program) => { %>
+     <option value="<%- program %>"><%- program %></option>
+    <%}) %>
+</select>
+</p>
+    <p>Email: <input type="email" name="email"></p>
+    <input type="submit" value="click to register">
+    </form>
+</body>
+</html>
